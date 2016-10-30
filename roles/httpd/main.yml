@@ -1,0 +1,6 @@
+---
+- name: install nginx
+  yum:
+    name=httpd
+    state=installed
+

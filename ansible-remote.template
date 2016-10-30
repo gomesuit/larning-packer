@@ -1,4 +1,7 @@
 {
+  "variables": {
+    "git_commit_id" : ""
+  },
   "builders" : [{
     "type" : "amazon-ebs",
     "region" : "ap-northeast-1",
@@ -8,7 +11,7 @@
     "instance_type" : "t2.micro",
     "source_ami" : "ami-59bdb937",
     "ssh_username" : "ec2-user",
-    "ami_name" : "packer-ansible-remote"
+    "ami_name" : "packer-ansible-remote {{user `git_commit_id`}}"
   }],
   "provisioners" : [{
     "type" : "ansible",
