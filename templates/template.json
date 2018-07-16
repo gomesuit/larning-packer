@@ -1,0 +1,21 @@
+{
+  "builders": [
+    {
+      "type": "file",
+      "content": "Lorem ipsum dolor sit amet",
+      "target": "dummy_artifact"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": ["echo foo"]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "shell-local",
+      "inline": ["echo foo"]
+    }
+  ]
+}
